@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shorts Factory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">SHORTS <span>FACTORY</span></div>
+      <div class="subtitle">Idea → Hook → Script → Scenes</div>
+    </div>
+    <button id="newProject" class="icon-btn" title="New project">＋</button>
+  </header>
+
+  <main>
+    <section class="card hero">
+      <label for="topic">What should the Short be about?</label>
+      <textarea id="topic" rows="3" placeholder="e.g. Why do airplanes stay in the air?"></textarea>
+      <div class="grid2">
+        <div>
+          <label for="niche">Niche</label>
+          <select id="niche">
+            <option>Science</option>
+            <option>Technology</option>
+            <option>Engineering</option>
+            <option>Space</option>
+            <option>Business</option>
+            <option>History</option>
+            <option>Psychology</option>
+            <option>General facts</option>
+          </select>
+        </div>
+        <div>
+          <label for="duration">Target length</label>
+          <select id="duration">
+            <option value="25">20–25 sec</option>
+            <option value="30" selected>25–30 sec</option>
+            <option value="40">30–40 sec</option>
+            <option value="50">40–50 sec</option>
+          </select>
+        </div>
+      </div>
+      <button id="generate" class="primary">CREATE SHORT CONCEPT</button>
+      <div id="status" class="status hidden"></div>
+    </section>
+
+    <section id="results" class="hidden">
+      <section class="card">
+        <div class="section-head">
+          <h2>Opportunity</h2>
+          <span id="scoreBadge" class="score">—</span>
+        </div>
+        <div id="scoreGrid" class="score-grid"></div>
+        <p id="opportunity"></p>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Hooks</h2>
+          <button data-action="regen-hooks" class="small-btn">Regenerate</button>
+        </div>
+        <div id="hooks"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Script</h2>
+          <button data-action="regen-script" class="small-btn">Regenerate</button>
+        </div>
+        <div id="script"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Scene breakdown</h2>
+          <button data-action="regen-scenes" class="small-btn">Regenerate</button>
+        </div>
+        <div id="scenes"></div>
+      </section>
+
+      <section class="card actions">
+        <button id="export" class="secondary">EXPORT PROJECT JSON</button>
+        <button id="clear" class="danger">DELETE PROJECT</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

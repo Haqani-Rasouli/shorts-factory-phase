@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts Factory",
+  "version": "0.1.0",
+  "description": "AI-assisted YouTube Shorts idea, hook, script and storyboard production.",
+  "permissions": [
+    "storage",
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open Shorts Factory"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {}
+}
